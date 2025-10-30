@@ -1,0 +1,1 @@
+# pratik_azure_static_app
