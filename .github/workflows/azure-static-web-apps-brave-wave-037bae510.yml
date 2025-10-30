@@ -23,6 +23,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/"          # root directory
-          skip_app_build: true       # 👈 this line skips Oryx build
-          output_location: "/"       # where index.html is
+          app_location: "/"              # root directory where index.html is located
+          skip_app_build: true           # skip Oryx build since this is a static HTML site
+          output_location: "/"           # output directory (same as input)
+          skip_deploy_on_missing_secrets: true  # safely skip deploy if token is missing
